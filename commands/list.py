@@ -1,8 +1,10 @@
 def func(commandsDict,args):
 	print("commands:")
+	print("")
 	for x in commandsDict:
-		print("\t{x}:")
-		print("\t\t{x.get('help')}:")
+		print(f"  {x}:")
+		print(f"    {commandsDict.get(x).get('help')}")
+		print("")
 
 cmd = {
 	"name":"list",
