@@ -24,7 +24,7 @@ def allCmd(cmdFiles):
 
 
 def executeCommand(commandsDict,text,args):
-	command = commandsDict.get(text)
+	command = commandsDict.get(text).get("function")
 	try:
 		command(commandsDict,args)
 	except:
@@ -34,7 +34,7 @@ def executeCommand(commandsDict,text,args):
 
 
 def main():
-	commands = allCmd("./pythonUtils/commands/")
+	commands = allCmd("./commands/")
 
 	# print(commands)
 
@@ -53,7 +53,8 @@ def main():
 		
 	print("order 66 executed !!!")
 
-main()
+if __name__ == "__main__" :
+	main()
 
 
 
